@@ -15,12 +15,9 @@ public class Collection {
 	static Contact c = new Contact();
 	static PersonalDetails pd = new PersonalDetails();
 	static Address a = new Address();
-	static List<Map.Entry<String, Object>> l=new ArrayList<Map.Entry<String, Object>>();
-		
-	static Set<Map.Entry<String, Object>> set;
+	//static List<Map.Entry<String, Object>> l=new ArrayList<Map.Entry<String, Object>>();
+	static List<String> l = new ArrayList<String>();	
 	static Map.Entry<String, Object> m;
-	static Iterator<Map.Entry<String, Object>> i;
-	
 	static String name ;
 	static String eMail;
 	static String district;
@@ -75,30 +72,48 @@ public class Collection {
 			map.put("Email", c.geteMail());
 			// map.put("PhoneNo", c.getPhoneNo());
 			map.put("District", a.getDistrict());
-			set = map.entrySet();
-			System.out.println(set);
+			Set set = map.entrySet();
 			
+			System.out.println(set);
+			l.add(name);
+			l.add(eMail);
+			l.add(district);
 
 		}
 
 		@SuppressWarnings({ })
 		static void retrieve() {
-			System.out.println(set);
+			//System.out.println(set);
 			// Using set
-//			List<Object> l = new ArrayList<Object>();
-//			l.add(map);
-	//
-//			Iterator i1 = l.iterator();
-//			while (i1.hasNext()) {
-//				System.out.println(i1.next());
-	//
-//			}
+			
+			
+	
+			Iterator<String> i=l.iterator();
+			while (i.hasNext()) {
+				System.out.println(i.next());
+	
+			}
 
 //			Set<Map.Entry<String, Object>> set = map.entrySet();
 //			// System.out.println(set);
 
 			
-			i = set.iterator();
+//			i1 = set.iterator();
+//			while (i1.hasNext()) {
+//				m = (Map.Entry<String, Object>) i1.next();
+//				System.out.println(m.getKey());
+//				System.out.println(m.getValue());
+//			}
+
+		}
+		
+		static void retrieve1() {
+
+//			Set<Map.Entry<String, Object>> set = map.entrySet();
+//			// System.out.println(set);
+
+			Set set=map.entrySet();
+			Iterator<Object> i = set.iterator();
 			while (i.hasNext()) {
 				m = (Map.Entry<String, Object>) i.next();
 				System.out.println(m.getKey());
