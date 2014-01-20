@@ -7,6 +7,7 @@ class one{
 		//System.out.println(s);
 		return s;
 	}
+	
 }
 class two{
 	static String s=" Two ";
