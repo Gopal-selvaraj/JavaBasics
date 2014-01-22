@@ -48,6 +48,7 @@ public class Collection {
 		}
 	}
 
+		@SuppressWarnings("rawtypes")
 		static void add() {
 			// List<String> l=new ArrayList<String>();
 			System.out.println("Enter the Name:");
@@ -107,6 +108,7 @@ public class Collection {
 
 		}
 		
+		@SuppressWarnings({ "unchecked", "rawtypes" })
 		static void retrieve1() {
 
 //			Set<Map.Entry<String, Object>> set = map.entrySet();
